@@ -1,3 +1,10 @@
+import { Navbar } from "@/elements/navbar";
+
 export default function Docs() {
-  return <a>Welcome to docs!</a>;
+  return (
+    <>
+      <Navbar />
+      <a>Welcome to docs!</a>
+    </>
+  );
 }

@@ -4,7 +4,11 @@
 }
 
 a:hover {
-  text-decoration: underline !important;
+  text-decoration: underline;
+}
+
+.navbar-logo {
+  text-decoration: none !important;
 }
 
 .navbar-brand {
@@ -13,7 +17,4 @@ a:hover {
 
 .navbar-menu {
   font-weight: 200;
-}
-
-article {
 }

@@ -1,7 +1,7 @@
 import { Navbar } from "@/elements/navbar";
 import { Quote } from "@/elements/quote";
 import { Top } from "@/elements/top";
-import { Foot } from "@/elements/foot";
+import { Footer } from "@/elements/foot";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
         <Quote />
         <Top />
       </div>
-      <Foot />
+      <Footer />
     </div>
   );
 }

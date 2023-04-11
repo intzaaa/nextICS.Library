@@ -33,8 +33,8 @@ export function Navbar() {
       aria-label="main navigation">
       <div className="navbar-brand">
         <a
-          className={`navbar-item`}
-          href="https://ics.library">
+          id="navbar-logo"
+          className={`navbar-logo navbar-item`}>
           ICS.Library
         </a>
         <a

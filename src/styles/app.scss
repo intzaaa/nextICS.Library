@@ -1,20 +1,21 @@
+@import "bulma-fluent/bulma.sass";
+
 :root {
   background-color: black;
-  overflow-y: hidden;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-.navbar-logo {
-  text-decoration: none !important;
+.navbar-item:hover,
+.navbar-item:active {
+  background-color: black !important;
 }
 
-.navbar-brand {
-  font-weight: 400;
-}
-
-.navbar-menu {
-  font-weight: 200;
+.navbar.is-black .navbar-start > .navbar-item,
+.navbar.is-black .navbar-start .navbar-link,
+.navbar.is-black .navbar-end > .navbar-item,
+.navbar.is-black .navbar-end .navbar-link {
+  color: white;
 }

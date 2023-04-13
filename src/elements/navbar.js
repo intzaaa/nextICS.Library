@@ -2,6 +2,7 @@ import Link from "next/link";
 import { IBM_Plex_Mono } from "next/font/google";
 import { IBM_Plex_Sans } from "next/font/google";
 import { useState } from "react";
+import styles from "./navbar.module.scss";
 import { user } from "@/handlers/user";
 
 const fontIPM = IBM_Plex_Mono({ subsets: ["latin"], weight: ["200", "400"] });
@@ -15,11 +16,10 @@ export function Navbar() {
     className: "",
   });
   function switchBurger() {
-    const active = "is-active";
     if (burger.state) {
       setBurger({ state: false, className: "" });
     } else {
-      setBurger({ state: true, className: active });
+      setBurger({ state: true, className: `is-active has-background-black` });
     }
   }
 
@@ -34,7 +34,7 @@ export function Navbar() {
       <div className="navbar-brand">
         <a
           id="navbar-logo"
-          className={`navbar-logo navbar-item`}>
+          className={`navbar-logo navbar-item ${styles.logo}`}>
           ICS.Library
         </a>
         <a
@@ -46,21 +46,21 @@ export function Navbar() {
         </a>
       </div>
 
-      <div className={`navbar-menu ${burger.className}`}>
-        <div className="navbar-start">
+      <div className={`navbar-menu ${burger.className} ${styles.menu}`}>
+        <div className={`navbar-start`}>
           <Link
             href="/"
-            className="navbar-item">
+            className={`navbar-item`}>
             Home
           </Link>
           <Link
             href="/docs"
-            className="navbar-item">
+            className={`navbar-item`}>
             Docs
           </Link>
         </div>
 
-        <div className={`navbar-end + ${fontIPS.className}`}>
+        <div className={`navbar-end ${fontIPS.className}`}>
           {/* <AccountInfo /> */}
           <a className="navbar-item">Create Account</a>
           <a className="navbar-item">Log in</a>

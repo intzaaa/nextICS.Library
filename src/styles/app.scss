@@ -1,16 +1,16 @@
 @import "bulma-fluent/bulma.sass";
 
 :root {
-  background-color: black;
+  background-color: hsl(0, 0%, 4%);
 }
 
-a:hover {
+*:link:hover {
   text-decoration: underline;
 }
 
 .navbar-item:hover,
 .navbar-item:active {
-  background-color: black !important;
+  background-color: hsl(0, 0%, 4%) !important;
 }
 
 .navbar.is-black .navbar-start > .navbar-item,

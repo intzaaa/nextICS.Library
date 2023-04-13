@@ -1,0 +1,18 @@
+.input {
+  background-color: transparent;
+  color: white;
+  border: white solid;
+  border-width: 0 0 0.02em 0;
+  outline: none;
+}
+
+.submit {
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.submit:hover {
+  text-decoration: underline;
+}

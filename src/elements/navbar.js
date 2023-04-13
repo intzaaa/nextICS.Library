@@ -62,8 +62,16 @@ export function Navbar() {
 
         <div className={`navbar-end ${fontIPS.className}`}>
           {/* <AccountInfo /> */}
-          <a className="navbar-item">Create Account</a>
-          <a className="navbar-item">Log in</a>
+          <Link
+            href={`/account/createAccount`}
+            className="navbar-item">
+            Create Account
+          </Link>
+          <Link
+            href={`/account/login`}
+            className="navbar-item">
+            Log in
+          </Link>
         </div>
       </div>
     </nav>

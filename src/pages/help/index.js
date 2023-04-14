@@ -1,9 +1,9 @@
 import { Navbar } from "@/elements/navbar";
 
-export default function Docs() {
+export default function Help() {
   return (
     <>
-      <Navbar />
+      <Navbar title="Help" />
       <a>Welcome to docs!</a>
     </>
   );

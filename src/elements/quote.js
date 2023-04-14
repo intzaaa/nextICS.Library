@@ -25,20 +25,20 @@ export function Quote() {
       className="section has-background-black-bis">
       <div className="columns">
         <div className={`column is-10 is-offset-1 is-mobile has-text-white ${fontIPS.className}`}>
-          <div className={`is-size-5 ml-5 mt-2 is-italic`}>
+          <div className={`is-size-4 is-size-6-mobile ml-5 mt-2 md-1 is-italic`}>
             <a
               id="quote-source"
-              className={`${styles["quote-source"]} has-text-white`}
+              className={`${styles.quoteSource} has-text-white`}
               href={quote.source.url}>
               {quote.source.a}
             </a>
           </div>
-          <div className="is-size-1 has-italic has-text-centered">
+          <div className={`${styles.quoteA} is-size-1 is-size-4-mobile has-text-centered`}>
             <span className="mr-1">“</span>
             {quote.a}
             <span className="ml-1">”</span>
           </div>
-          <div className="is-size-5 mr-5 mb-2 has-text-right">{quote.author}</div>
+          <div className="is-size-4 is-size-6-mobile mr-5 mb-2 md-1 has-text-right">{quote.author}</div>
         </div>
       </div>
     </div>

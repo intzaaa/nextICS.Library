@@ -17,22 +17,25 @@ function Form() {
   return (
     <div className="section">
       <div className={`container has-text-centered has-text-white ${fontIPM.className}`}>
-        <div className="is-size-5">Login</div>
+        <div className="is-size-3 is-size-5-mobile">Login</div>
         <form>
           <div>
             <input
               id="username"
-              className={`${styles.input} ${fontIPM.className} mt-1 mb-1`}></input>
+              placeholder="username"
+              className={`${styles.input} ${fontIPM.className} is-size-3 is-size-5-mobile mt-1 mb-1`}></input>
           </div>
           <div>
             <input
               id="password"
-              className={`${styles.input} ${fontIPM.className} mt-1 mb-1`}></input>
+              placeholder="password"
+              type="password"
+              className={`${styles.input} ${fontIPM.className} is-size-3 is-size-5-mobile mt-1 mb-1`}></input>
           </div>
           <div>
             <input
               type="submit"
-              className={`${styles.submit} ${fontIPM.className} is-size-5 mt-3`}
+              className={`${styles.submit} ${fontIPM.className} is-size-3 is-size-5-mobile mt-3`}
               value={`sumbit`}
             />
           </div>

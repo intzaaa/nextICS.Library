@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { IBM_Plex_Mono } from "next/font/google";
+import Head from "next/head";
+import config from "../../site.config";
+import { IBM_Plex_Mono, Stylish } from "next/font/google";
 import { IBM_Plex_Sans } from "next/font/google";
 import { useState } from "react";
 import styles from "./navbar.module.scss";
@@ -8,7 +10,7 @@ import { user } from "@/handlers/user";
 const fontIPM = IBM_Plex_Mono({ subsets: ["latin"], weight: ["200", "400"] });
 const fontIPS = IBM_Plex_Sans({ subsets: ["latin"], weight: ["200", "400"] });
 
-export function Navbar() {
+export function Navbar({ title }) {
   // 初始化移动端菜单样式
   // Initialize the style of the menu on mobile devices
   const [burger, setBurger] = useState({
@@ -26,17 +28,30 @@ export function Navbar() {
   // 检测用户状态
   // Check user status
   // TODO
+
+  // 设置标题以及标题效果
+  let setTitle = {
+    name: title,
+    className: {},
+  };
+  setTitle.className[String(title)] = styles.title;
   return (
     <nav
       className={`${fontIPM.className} navbar is-black`}
       role="navigation"
       aria-label="main navigation">
+      <Head>
+        <title>
+          {title} - {config.name}
+        </title>
+      </Head>
       <div className="navbar-brand">
-        <a
+        <Link
           id="navbar-logo"
-          className={`navbar-logo navbar-item ${styles.logo}`}>
-          ICS.Library
-        </a>
+          href="/"
+          className={`${styles.logo} ${setTitle.className.Home || ""} navbar-logo navbar-item`}>
+          {config.name}
+        </Link>
         <a
           onClick={switchBurger}
           className={`navbar-burger ${burger.className}`}>
@@ -49,14 +64,9 @@ export function Navbar() {
       <div className={`navbar-menu ${burger.className} ${styles.menu}`}>
         <div className={`navbar-start`}>
           <Link
-            href="/"
-            className={`navbar-item`}>
-            Home
-          </Link>
-          <Link
-            href="/docs"
-            className={`navbar-item`}>
-            Docs
+            href="/help"
+            className={`navbar-item ${setTitle.className.Help || ""}`}>
+            Help
           </Link>
         </div>
 

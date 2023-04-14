@@ -1,9 +1,7 @@
-.quote-source {
+.quoteSource {
   text-decoration: underline;
 }
 
-/* #quote {
-  @include touch {
-    font-size: 1em;
-  }
-} */
+.quoteA {
+  text-shadow: 0 0 0.5em whitesmoke;
+}

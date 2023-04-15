@@ -47,7 +47,7 @@ export function Navbar({ title }) {
   setNavbarTitle.className[String(title)] = styles.title;
   return (
     <nav
-      className={`${fontIPM.className} navbar is-black`}
+      className={`${styles.main} ${fontIPM.className} navbar is-black`}
       role="navigation"
       aria-label="main navigation">
       <Head>

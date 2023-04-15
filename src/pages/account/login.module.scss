@@ -4,13 +4,26 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  overflow: hidden;
   min-height: 50vh;
+  @include tablet {
+    overflow: visible;
+  }
+  @include mobile {
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
+}
+
+.columns {
+  margin: 0;
+  width: 100%;
 }
 
 $height: 75vh;
 
 .login {
+  margin: 0;
+  overflow: visible;
   user-select: none;
   text-shadow: none;
   @include tablet {
@@ -20,12 +33,12 @@ $height: 75vh;
   @include mobile {
     font-size: 20vw;
   }
-  transition: all 5s;
+  transition: text-shadow 5s;
 }
 
 .login:hover {
   text-shadow: 0 0 12em white;
-  transition: all 5s;
+  transition: text-shadow 5s;
 }
 
 .formFather {

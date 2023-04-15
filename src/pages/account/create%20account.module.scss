@@ -4,13 +4,19 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  overflow: hidden;
   min-height: 50vh;
+  overflow: visible;
+}
+
+.columns {
+  margin: 0;
+  width: 100%;
 }
 
 $height: 75vh;
 
 .ca {
+  overflow: visible;
   user-select: none;
   line-height: 1em;
   text-shadow: none;
@@ -21,12 +27,12 @@ $height: 75vh;
   @include mobile {
     font-size: 15vw;
   }
-  transition: all 5s;
+  transition: text-shadow 5s;
 }
 
 .ca:hover {
   text-shadow: 0 0 12em white;
-  transition: all 5s;
+  transition: text-shadow 5s;
 }
 
 .formFather {

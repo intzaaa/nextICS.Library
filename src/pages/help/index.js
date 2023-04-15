@@ -4,7 +4,7 @@ export default function Help() {
   return (
     <>
       <Navbar title="Help" />
-      <a>Welcome to docs!</a>
+      <a></a>
     </>
   );
 }

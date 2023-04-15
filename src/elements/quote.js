@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IBM_Plex_Sans } from "next/font/google";
 import { useState } from "react";
 import styles from "./quote.module.scss";
@@ -20,18 +21,18 @@ export function Quote() {
     date: "2023.04.11",
   }); */
   return (
-    <div
+    <section
       id="quote"
       className="section has-background-black-bis">
       <div className="columns">
         <div className={`column is-10 is-offset-1 is-mobile has-text-white ${fontIPS.className}`}>
           <div className={`is-size-4 is-size-6-mobile ml-5 mt-2 md-1 is-italic`}>
-            <a
+            <Link
               id="quote-source"
               className={`${styles.quoteSource} has-text-white`}
               href={quote.source.url}>
               {quote.source.a}
-            </a>
+            </Link>
           </div>
           <div className={`${styles.quoteA} is-size-1 is-size-4-mobile has-text-centered`}>
             <span className="mr-1">“</span>
@@ -41,6 +42,6 @@ export function Quote() {
           <div className="is-size-4 is-size-6-mobile mr-5 mb-2 md-1 has-text-right">{quote.author}</div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

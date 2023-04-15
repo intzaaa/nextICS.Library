@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Head from "next/head";
-import config from "../../site.config";
-import { IBM_Plex_Mono, Stylish } from "next/font/google";
+import { IBM_Plex_Mono } from "next/font/google";
 import { IBM_Plex_Sans } from "next/font/google";
 import { useState } from "react";
+import "animate.css";
 import styles from "./navbar.module.scss";
+import config from "../../site.config";
 import { user } from "@/handlers/user";
 
 const fontIPM = IBM_Plex_Mono({ subsets: ["latin"], weight: ["200", "400"] });
@@ -30,26 +31,33 @@ export function Navbar({ title }) {
   // TODO
 
   // 设置标题以及标题效果
-  let setTitle = {
+  const [headTitle] = useState(() => {
+    let head;
+    if (title) {
+      head = `${title} - ${config.name}`;
+    } else {
+      head = `${config.name}`;
+    }
+    return head;
+  });
+  let setNavbarTitle = {
     name: title,
     className: {},
   };
-  setTitle.className[String(title)] = styles.title;
+  setNavbarTitle.className[String(title)] = styles.title;
   return (
     <nav
       className={`${fontIPM.className} navbar is-black`}
       role="navigation"
       aria-label="main navigation">
       <Head>
-        <title>
-          {title} - {config.name}
-        </title>
+        <title>{String(headTitle)}</title>
       </Head>
       <div className="navbar-brand">
         <Link
           id="navbar-logo"
           href="/"
-          className={`${styles.logo} ${setTitle.className.Home || ""} navbar-logo navbar-item`}>
+          className={`${styles.logo} ${setNavbarTitle.className.Home || ""} navbar-logo navbar-item animate__animated animate__fadeIn animate__faster`}>
           {config.name}
         </Link>
         <a
@@ -65,7 +73,7 @@ export function Navbar({ title }) {
         <div className={`navbar-start`}>
           <Link
             href="/help"
-            className={`navbar-item ${setTitle.className.Help || ""}`}>
+            className={`navbar-item ${setNavbarTitle.className.Help || ""}`}>
             Help
           </Link>
         </div>
@@ -73,14 +81,14 @@ export function Navbar({ title }) {
         <div className={`navbar-end ${fontIPS.className}`}>
           {/* <AccountInfo /> */}
           <Link
-            href={`/account/createAccount`}
-            className="navbar-item">
+            href={`/account/create account`}
+            className={`navbar-item ${setNavbarTitle.className["Create Account"] || ""}`}>
             Create Account
           </Link>
           <Link
             href={`/account/login`}
-            className="navbar-item">
-            Log in
+            className={`navbar-item ${setNavbarTitle.className.Login || ""}`}>
+            Login
           </Link>
         </div>
       </div>

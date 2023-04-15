@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "next-ics-library",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "autoprefixer": "10.4.14",
     "bulma": "^0.9.4",
     "bulma-fluent": "^0.4.3",

@@ -1,4 +1,4 @@
-@import "bulma-fluent/bulma.sass";
+@import "bulma/bulma.sass";
 
 :root {
   background-color: hsl(0, 0%, 4%);
@@ -9,7 +9,8 @@
 }
 
 .navbar-item:hover,
-.navbar-item:active {
+.navbar-item:active,
+.navbar-item:visited {
   background-color: hsl(0, 0%, 4%) !important;
 }
 

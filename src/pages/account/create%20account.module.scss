@@ -10,20 +10,21 @@
 
 $height: 75vh;
 
-.login {
+.ca {
   user-select: none;
+  line-height: 1em;
   text-shadow: none;
   @include tablet {
     height: $height;
-    font-size: 15vw;
+    font-size: 10vw;
   }
   @include mobile {
-    font-size: 20vw;
+    font-size: 15vw;
   }
   transition: all 5s;
 }
 
-.login:hover {
+.ca:hover {
   text-shadow: 0 0 12em white;
   transition: all 5s;
 }
